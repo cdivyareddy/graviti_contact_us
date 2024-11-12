@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact-page">
+        <h1>Contact Us</h1>
+        <p>We're here to help! Reach out with any questions or inquiries.</p>
+
+        <div class="contact-info">
+            <p>Email us at: 
+                <a href="mailto:graviti.support@graviti.linkpc.net">graviti.support@graviti.linkpc.net</a>
+            </p>
+        </div>
+
+        <form id="enquiry-form" onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <select required>
+                <option value="">Select a Subject</option>
+                <option>General Inquiry</option>
+                <option>Support</option>
+                <option>Feedback</option>
+            </select>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Confirmation Animation -->
+        <div id="confirmation" class="confirmation">
+            <p>Thank you! Your message has been sent successfully.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
