@@ -1,0 +1,120 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
+body {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Wrapper styling */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem; /* Adds padding above and below the form */
+    width: 100%;
+}
+
+/* Container styling */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px; /* Limit max width */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.contact-info, .contact-form {
+    padding: 2rem;
+}
+
+/* Left side (contact information) */
+.contact-info {
+    background-color: #139b8f;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.contact-info a {
+    color: #0c0e12;
+    text-decoration: none;
+}
+
+.contact-info p i {
+    margin-right: 0.5rem;
+    color: #171917;
+    font-size: 1.5rem;
+}
+
+/* Right side (contact form) */
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #0d0f0d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1.2rem;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #1dddd6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: col
+    }
+}
