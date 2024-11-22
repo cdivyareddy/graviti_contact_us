@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
+body {
+    font-family: 'Abyssinica SIL', serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    animation: fadeInBackground 1.5s ease-in-out;
+}
+
+/* Fade-In Background Animation */
+@keyframes fadeInBackground {
+    0% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: #f4f4f4;
+    }
+}
+
+/* Wrapper Styling */
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    width: 100%;
+}
+
+/* Container Styling */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transform: scale(0.9);
+    animation: popUp 0.8s ease-in-out forwards;
+}
+
+/* Pop-Up Animation */
+@keyframes popUp {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.contact-info, .contact-form {
+    padding: 2rem;
+}
+
+/* Left Side (Contact Information) */
+.contact-info {
+    background-color: #4ebcb3;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Slide-In Animation for Info */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.contact-info a {
+    color: #0c0e12;
+    text-decoration: none;
+}
+
+.contact-info p i {
+    margin-right: 0.5rem;
+    color: #171917;
+    font-size: 1.5rem;
+}
+
+/* Right Side (Contact Form) */
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Slide-In Animation for Form */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation for Input Fields */
+.contact-form input:hover,
+.contact-form textarea:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form input[type="submit"] {
+    background-color: #000000; /* Black color */
+    color: #ffffff; /* White text for contrast */
+    border: 2px solid #000000; /* Black border */
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1.2rem;
+    border-radius: 50px;
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    overflow: hidden; /* For ripple effect */
+}
+
+/* Hover Animation for Send Button */
+.contact-form input[type="submit"]:hover {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border-color: #000000; /* Retain black border */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Increase shadow intensity */
+}
+
+/* Active/Click Animation for Send Button */
+.contact-form input[type="submit"]:active {
+    transform: scale(0.95); /* Shrinks slightly on click */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow reduction */
+}
+
+/* Ripple Effect */
+.contact-form input[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5); /* Ripple color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-form input[type="submit"]:hover::after {
+    width: 300%;
+    height: 300%;
+}
+
+   
